@@ -3,6 +3,9 @@
     {{- if .Site.Params.Analytics.Yandexmetrica.Enabled -}}
     {{ partial "metrica.html" . }}
     {{- end -}}
+    {{- if or .Site.Params.math .Params.math -}}
+    {{ partial "math.html" . }}
+    {{- end -}}
     <title>{{site.Title}}{{if not .IsHome}} | {{.Title}}{{end}}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
